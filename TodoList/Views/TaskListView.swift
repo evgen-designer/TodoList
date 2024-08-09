@@ -10,12 +10,12 @@ import CoreData
 
 struct TaskListView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
+    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \TaskItem.dueDate, ascending: true)],
         animation: .default)
     private var items: FetchedResults<TaskItem>
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -32,19 +32,19 @@ struct TaskListView: View {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             EditButton()
                         }
-                }
-
+                    }
+                    
                     FloatingButton()
                 }
             }
             .navigationTitle("Todo list")
         }
     }
-
+    
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
-
+            
             do {
                 try viewContext.save()
             } catch {
@@ -63,5 +63,5 @@ private let itemFormatter: DateFormatter = {
 }()
 
 #Preview {
-    TaskListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    TaskListView()
 }
