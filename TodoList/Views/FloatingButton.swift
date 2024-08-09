@@ -1,0 +1,30 @@
+//
+//  FloatingButton.swift
+//  TodoList
+//
+//  Created by Mac on 09/08/2024.
+//
+
+import SwiftUI
+
+struct FloatingButton: View {
+    var body: some View {
+        Spacer()
+        HStack {
+            NavigationLink(destination: TaskEditView()) {
+                Text("+ New task")
+                    .font(.headline)
+            }
+            .padding(15)
+            .foregroundColor(.white)
+            .background(Color.accentColor)
+            .cornerRadius(30)
+            .padding(30)
+            .shadow(color: .black.opacity(0.3), radius: 3, x: 3, y: 3)
+        }
+    }
+}
+
+#Preview {
+    FloatingButton()
+}
