@@ -13,7 +13,7 @@ struct TaskCell: View {
     
     var body: some View {
         CheckBoxView(passedTaskItem: passedTaskItem)
-            .environment(dateHolder)
+            .environmentObject(dateHolder)
         
         Text(passedTaskItem.name ?? "")
             .padding(.horizontal)

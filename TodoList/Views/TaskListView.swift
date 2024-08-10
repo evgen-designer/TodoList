@@ -22,7 +22,7 @@ struct TaskListView: View {
             VStack {
                 ZStack {
                     List {
-                        ForEach(items) { item in
+                        ForEach(items) { taskItem in
                             NavigationLink(destination: TaskEditView(passedTaskItem: taskItem, initialDate: Date()).environmentObject(dateHolder)) {
                                 TaskCell(passedTaskItem: taskItem)
                                     .environmentObject(dateHolder)
