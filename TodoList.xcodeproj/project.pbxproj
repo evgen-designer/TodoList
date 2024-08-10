@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0470AC512C674B44006CBF82 /* DateHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470AC502C674B44006CBF82 /* DateHolder.swift */; };
+		0470AC532C674F23006CBF82 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470AC522C674F23006CBF82 /* TaskCell.swift */; };
+		0470AC552C675040006CBF82 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470AC542C675040006CBF82 /* CheckBoxView.swift */; };
+		0470AC582C6751AF006CBF82 /* TaskItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470AC572C6751AE006CBF82 /* TaskItemExtension.swift */; };
 		04E22BFC2C65EDCC005A89C9 /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E22BFB2C65EDCC005A89C9 /* TodoListApp.swift */; };
 		04E22BFE2C65EDCC005A89C9 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E22BFD2C65EDCC005A89C9 /* TaskListView.swift */; };
 		04E22C002C65EDD1005A89C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E22BFF2C65EDD1005A89C9 /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0470AC502C674B44006CBF82 /* DateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHolder.swift; sourceTree = "<group>"; };
+		0470AC522C674F23006CBF82 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		0470AC542C675040006CBF82 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
+		0470AC572C6751AE006CBF82 /* TaskItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemExtension.swift; sourceTree = "<group>"; };
 		04E22BF82C65EDCC005A89C9 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E22BFB2C65EDCC005A89C9 /* TodoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApp.swift; sourceTree = "<group>"; };
 		04E22BFD2C65EDCC005A89C9 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
@@ -40,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0470AC562C67516E006CBF82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04E22C042C65EDD1005A89C9 /* Persistence.swift */,
+				0470AC572C6751AE006CBF82 /* TaskItemExtension.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		04E22BEF2C65EDCC005A89C9 = {
 			isa = PBXGroup;
 			children = (
@@ -61,7 +78,8 @@
 			children = (
 				04E22BFB2C65EDCC005A89C9 /* TodoListApp.swift */,
 				04E22C122C65F395005A89C9 /* Views */,
-				04E22C042C65EDD1005A89C9 /* Persistence.swift */,
+				0470AC562C67516E006CBF82 /* Model */,
+				0470AC502C674B44006CBF82 /* DateHolder.swift */,
 				04E22BFF2C65EDD1005A89C9 /* Assets.xcassets */,
 				04E22C062C65EDD1005A89C9 /* TodoList.xcdatamodeld */,
 				04E22C012C65EDD1005A89C9 /* Preview Content */,
@@ -83,6 +101,8 @@
 				04E22BFD2C65EDCC005A89C9 /* TaskListView.swift */,
 				04E22C0E2C65F308005A89C9 /* FloatingButton.swift */,
 				04E22C102C65F388005A89C9 /* TaskEditView.swift */,
+				0470AC522C674F23006CBF82 /* TaskCell.swift */,
+				0470AC542C675040006CBF82 /* CheckBoxView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,9 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0470AC512C674B44006CBF82 /* DateHolder.swift in Sources */,
+				0470AC582C6751AF006CBF82 /* TaskItemExtension.swift in Sources */,
 				04E22C052C65EDD1005A89C9 /* Persistence.swift in Sources */,
 				04E22BFE2C65EDCC005A89C9 /* TaskListView.swift in Sources */,
 				04E22C0F2C65F308005A89C9 /* FloatingButton.swift in Sources */,
+				0470AC552C675040006CBF82 /* CheckBoxView.swift in Sources */,
+				0470AC532C674F23006CBF82 /* TaskCell.swift in Sources */,
 				04E22C112C65F388005A89C9 /* TaskEditView.swift in Sources */,
 				04E22BFC2C65EDCC005A89C9 /* TodoListApp.swift in Sources */,
 				04E22C082C65EDD1005A89C9 /* TodoList.xcdatamodeld in Sources */,
