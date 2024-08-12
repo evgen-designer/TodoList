@@ -12,14 +12,18 @@ struct TaskListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var dateHolder: DateHolder
     
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \TaskItem.dueDate, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<TaskItem>
+//    @FetchRequest(
+//        sortDescriptors: [NSSortDescriptor(keyPath: \TaskItem.dueDate, ascending: true)],
+//        animation: .default)
+//    private var items: FetchedResults<TaskItem>
     
     var body: some View {
         NavigationView {
             VStack {
+                DateScroller()
+                    .padding()
+                    .environmentObject(dateHolder)
+                
                 ZStack {
                     List {
                         ForEach(items) { taskItem in
