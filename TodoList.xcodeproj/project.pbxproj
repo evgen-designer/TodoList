@@ -12,6 +12,7 @@
 		0470AC552C675040006CBF82 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470AC542C675040006CBF82 /* CheckBoxView.swift */; };
 		0470AC582C6751AF006CBF82 /* TaskItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470AC572C6751AE006CBF82 /* TaskItemExtension.swift */; };
 		04CA56D52C69EC180069DFF5 /* DateScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA56D42C69EC180069DFF5 /* DateScroller.swift */; };
+		04CA56D72C6B37140069DFF5 /* TaskFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA56D62C6B37140069DFF5 /* TaskFilter.swift */; };
 		04E22BFC2C65EDCC005A89C9 /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E22BFB2C65EDCC005A89C9 /* TodoListApp.swift */; };
 		04E22BFE2C65EDCC005A89C9 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E22BFD2C65EDCC005A89C9 /* TaskListView.swift */; };
 		04E22C002C65EDD1005A89C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E22BFF2C65EDD1005A89C9 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		0470AC542C675040006CBF82 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		0470AC572C6751AE006CBF82 /* TaskItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemExtension.swift; sourceTree = "<group>"; };
 		04CA56D42C69EC180069DFF5 /* DateScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateScroller.swift; sourceTree = "<group>"; };
+		04CA56D62C6B37140069DFF5 /* TaskFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFilter.swift; sourceTree = "<group>"; };
 		04E22BF82C65EDCC005A89C9 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E22BFB2C65EDCC005A89C9 /* TodoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApp.swift; sourceTree = "<group>"; };
 		04E22BFD2C65EDCC005A89C9 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				0470AC502C674B44006CBF82 /* DateHolder.swift */,
 				04E22C042C65EDD1005A89C9 /* Persistence.swift */,
 				0470AC572C6751AE006CBF82 /* TaskItemExtension.swift */,
+				04CA56D62C6B37140069DFF5 /* TaskFilter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				0470AC582C6751AF006CBF82 /* TaskItemExtension.swift in Sources */,
 				04E22C052C65EDD1005A89C9 /* Persistence.swift in Sources */,
 				04E22BFE2C65EDCC005A89C9 /* TaskListView.swift in Sources */,
+				04CA56D72C6B37140069DFF5 /* TaskFilter.swift in Sources */,
 				04E22C0F2C65F308005A89C9 /* FloatingButton.swift in Sources */,
 				0470AC552C675040006CBF82 /* CheckBoxView.swift in Sources */,
 				0470AC532C674F23006CBF82 /* TaskCell.swift in Sources */,
