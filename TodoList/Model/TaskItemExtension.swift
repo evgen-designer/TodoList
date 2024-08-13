@@ -20,7 +20,7 @@ extension TaskItem {
         return false
     }
     
-    func overdueColor() -> Color {
+    func overDueColor() -> Color {
         return isOverdue() ? .red : .black
     }
     

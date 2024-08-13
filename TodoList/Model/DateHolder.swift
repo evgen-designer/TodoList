@@ -5,7 +5,7 @@
 //  Created by Mac on 10/08/2024.
 //
 
-import Foundation
+import SwiftUI
 import CoreData
 
 class DateHolder: ObservableObject {
@@ -29,14 +29,14 @@ class DateHolder: ObservableObject {
     
     func fetchTaskItems(_ context: NSManagedObjectContext) -> [TaskItem] {
         do {
-            return try context.fetch(dailyTaskFetch()) as [TaskItem]
+            return try context.fetch(dailyTasksFetch()) as [TaskItem]
         }
         catch let error {
             fatalError("Unresolved error \(error)")
         }
     }
     
-    func dailyTaskFetch() -> NSFetchRequest<TaskItem> {
+    func dailyTasksFetch() -> NSFetchRequest<TaskItem> {
         let request = TaskItem.fetchRequest()
         request.sortDescriptors = sortOrder()
         request.predicate = predicate()
@@ -47,12 +47,12 @@ class DateHolder: ObservableObject {
         let completedDateSort = NSSortDescriptor(keyPath: \TaskItem.completedDate, ascending: true)
         let timeSort = NSSortDescriptor(keyPath: \TaskItem.scheduleTime, ascending: true)
         let dueDateSort = NSSortDescriptor(keyPath: \TaskItem.dueDate, ascending: true)
-        return [completedDateSort,timeSort, dueDateSort]
+        return [completedDateSort, timeSort, dueDateSort]
     }
     
     private func predicate() -> NSPredicate {
         let start = calendar.startOfDay(for: date)
-        let end = calendar.date(byAdding: .day, value: 1, to: start)!
+        let end = calendar.date(byAdding: .day, value: 1, to: start)
         return NSPredicate(format: "dueDate >= %@ AND dueDate < %@", start as NSDate, end! as NSDate)
     }
     

@@ -9,11 +9,11 @@ import SwiftUI
 
 enum TaskFilter: String {
     static var allFilters: [TaskFilter] {
-        return [.NonCompleted, .Completed, .Overdue, .All]
+        return [.NonCompleted,.Completed,.OverDue,.All]
     }
     
     case All = "All"
     case NonCompleted = "To do"
     case Completed = "Completed"
-    case Overdue = "Overdue"
+    case OverDue = "Overdue"
 }

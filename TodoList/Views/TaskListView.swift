@@ -24,7 +24,7 @@ struct TaskListView: View {
                 ZStack {
                     List {
                         ForEach(filteredTaskItems()) { taskItem in
-                            NavigationLink(destination: TaskEditView(passedTaskItem: taskItem, initialDate: Date()).environmentObject(dateHolder)) {
+                            NavigationLink(destination: TaskEditView(passedTaskItem: taskItem, initialDate: taskItem.dueDate!).environmentObject(dateHolder)) {
                                 TaskCell(passedTaskItem: taskItem)
                                     .environmentObject(dateHolder)
                             }
@@ -59,7 +59,7 @@ struct TaskListView: View {
             return dateHolder.taskItems.filter { !$0.isCompleted() }
         }
         
-        if selectedFilter == TaskFilter.Overdue {
+        if selectedFilter == TaskFilter.OverDue {
             return dateHolder.taskItems.filter { $0.isOverdue() }
         }
         

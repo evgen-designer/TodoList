@@ -14,7 +14,7 @@ struct TodoListApp: App {
     var body: some Scene {
         WindowGroup {
             
-            let context =  persistenceController.container.viewContext
+            let context = persistenceController.container.viewContext
             let dateHolder = DateHolder(context)
             
             TaskListView()
