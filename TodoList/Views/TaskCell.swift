@@ -30,6 +30,7 @@ struct TaskCell: View {
     }
 }
 
-#Preview {
-    TaskCell(passedTaskItem: TaskItem())
-}
+//#Preview {
+//    TaskCell(passedTaskItem: TaskItem(context: PersistenceController.preview.container.viewContext))
+//        .environmentObject(DateHolder(PersistenceController.preview.container.viewContext))
+//}

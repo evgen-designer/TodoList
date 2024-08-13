@@ -82,5 +82,6 @@ struct TaskEditView: View {
 }
 
 #Preview {
-    TaskEditView(passedTaskItem: TaskItem(), initialDate: Date())
+    TaskEditView(passedTaskItem: TaskItem(context: PersistenceController.preview.container.viewContext), initialDate: Date())
+        .environmentObject(DateHolder(PersistenceController.preview.container.viewContext))
 }

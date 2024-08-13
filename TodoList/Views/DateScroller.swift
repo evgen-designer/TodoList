@@ -56,4 +56,5 @@ struct DateScroller: View {
 
 #Preview {
     DateScroller()
+        .environmentObject(DateHolder(PersistenceController.preview.container.viewContext))
 }

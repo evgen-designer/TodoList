@@ -84,4 +84,6 @@ private let itemFormatter: DateFormatter = {
 
 #Preview {
     TaskListView()
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        .environmentObject(DateHolder(PersistenceController.preview.container.viewContext))
 }

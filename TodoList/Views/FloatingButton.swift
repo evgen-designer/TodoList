@@ -34,4 +34,5 @@ struct FloatingButton: View {
 
 #Preview {
     FloatingButton()
+        .environmentObject(DateHolder(PersistenceController.preview.container.viewContext))
 }

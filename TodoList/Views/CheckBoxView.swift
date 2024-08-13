@@ -26,6 +26,7 @@ struct CheckBoxView: View {
     }
 }
 
-#Preview {
-    CheckBoxView(passedTaskItem: TaskItem())
-}
+//#Preview {
+//    CheckBoxView(passedTaskItem: TaskItem(context: PersistenceController.preview.container.viewContext))
+//        .environmentObject(DateHolder(PersistenceController.preview.container.viewContext))
+//}
